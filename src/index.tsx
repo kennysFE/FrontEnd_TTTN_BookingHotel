@@ -23,18 +23,17 @@ export const history = createBrowserHistory({ window });
 
 import PageFooter from "./components/Footer/PageFooter";
 import Home from "./pages/Home/Home";
-import HomeTemplate from "./templates/homeTemplate";
-
+import HomeTemplate from "./templates/HomeTemplate";
+// import HomeTemplate from "./templates/HomeTemplate";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Provider store={store} >
+    <Provider store={store}>
       {/* thay BrowserRouter thanh historyRouter */}
       <HistoryRouter history={history}>
         {/* <RouterProvider router={router} /> */}
         <Routes>
           <Route path="" element={<HomeTemplate />}>
-            {/* <Route path="*" element={<Navigate to= "" />} /> */}
             <Route path="/pagefooter" element={<PageFooter />}></Route>
           </Route>
         </Routes>

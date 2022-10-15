@@ -6,10 +6,11 @@ import {
   AiOutlineGlobal,
   AiOutlineTwitter,
 } from "react-icons/ai";
+import classNames from "classnames";
 
 export default function HeaderPage() {
   const [showLanguages, setShowLanguages] = useState(false);
-  const [searchVisible, setSearchVisible] = useState(false);
+  // const [searchVisible, setSearchVisible] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -59,27 +60,31 @@ export default function HeaderPage() {
                   href="https://www.airbnb.com.vn/host/homes"
                   target="_blank"
                   className="m-0 text-black hover:text-black hidden lg:block"
-                ></a>
-
-                <span className="hidden sm:block">
-                  <AiOutlineGlobal className="text-lg" />
-                </span>
-
-                <div
-                  style={{ boxShadow: "0 0 2px 2px rgba(0,0,0,0.3)" }}
-                  className="w-32 absolute top-14 right-10 bg-white animate__animated animate__fadeInDown rounded-md "
                 >
-                  {/* <p className="m-0 p-2 hoverDn hover:bg-gray-100">Vietnamese</p>
+                  Đón tiếp khách
+                </a>
+
+                {/* ------------------------------------ ------------------------------------------ Testing show language change */}
+
+                <span onClick={() => setShowLanguages(!showLanguages)} className="hidden sm:block"><AiOutlineGlobal className="text-lg" /></span>
+
+                <div style={{ boxShadow: '0 0 2px 2px rgba(0,0,0,0.3)' }} className={classNames("w-32 absolute top-14 right-10 bg-white  rounded-md ", {
+                  hidden: !showLanguages
+                })} >
+                  <p className="m-0 p-2 hoverDn hover:bg-gray-100">Vietnamese</p>
                 <p className="m-0 p-2 hoverDn hover:bg-gray-100">English</p>
-                <p className="m-0 p-2 hoverDn hover:bg-gray-100">Chinese</p> */}
+                <p className="m-0 p-2 hoverDn hover:bg-gray-100">Chinese</p>
                 </div>
 
-                {/* <DropDown /> */}
+                {/* ---------------------------------------------------------------------------------------------------------- */}
+
+                {/*DropDown Admin Form  */}
               </div>
             </div>
           </div>
         </div>
-        {/* <HeaderSearch setSearchVisible={() => setSearchVisible(false)} searchVisible={searchVisible} /> */}
+
+        {/* HeaderSearc */}
       </div>
     </>
   );
