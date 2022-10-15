@@ -1,15 +1,9 @@
-import React from "react";
-import { Outlet } from "react-router-dom";
-// import { Pagination } from 'antd';
-import PageFooter from "../../components/Footer/PageFooter";
+import React from 'react'
 
+type Props = {}
 
-type Props = {};
-
-export const Home = (props: Props) => {
-  return <div>Home
-    {/* <Pagination defaultCurrent={1} total={50} />;
-    <PageFooter /> */}
-    < Outlet />
-  </div>;
-};
+export default function Home({}: Props) {
+  return (
+    <div>Home</div>
+  )
+}
