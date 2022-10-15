@@ -7,6 +7,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import classNames from "classnames";
+import HeaderMenu from "./HeaderMenu";
 
 export default function HeaderPage() {
   const [showLanguages, setShowLanguages] = useState(false);
@@ -79,6 +80,7 @@ export default function HeaderPage() {
                 {/* ---------------------------------------------------------------------------------------------------------- */}
 
                 {/*DropDown Admin Form  */}
+                < HeaderMenu />
               </div>
             </div>
           </div>
