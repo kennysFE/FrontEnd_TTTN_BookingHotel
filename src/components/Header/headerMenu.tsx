@@ -11,14 +11,7 @@ export default function HeaderMenu() {
 
   const menu = (
     <Menu
-      className=""
-      style={{
-        width: "240px",
-        borderRadius: "10px",
-        boxShadow: "0 0 3px 3px rgba(0,0,0,0.1)",
-        marginTop: "10px",
-        padding: "10px 0",
-      }}
+      className="w-60 rounded-xl py-2.5 mt-2.5 shadow-b-3"
       items={[
         {
           key: "1",
@@ -40,8 +33,8 @@ export default function HeaderMenu() {
             <>
               <p
                 onClick={() => navigate("/login")}
-                className="text-base   m-0 pb-4 pt-3"
-                style={{ borderBottom: "1px solid #ccc" }}
+                className="text-base m-0 py-1 border-r"
+                // style={{ borderBottom: "1px solid #ccc" }}
               >
                 Đăng nhập
               </p>
@@ -50,22 +43,22 @@ export default function HeaderMenu() {
         },
         {
           key: "3",
-          label: <p className="text-base   m-0 py-1">Đi đến trang quản trị</p>,
+          label: <p className="text-base m-0 py-1">Đi đến trang quản trị</p>,
         },
         {
           key: "4",
-          label: <p className="text-base   m-0 py-1">Cho thuê nhà</p>,
+          label: <p className="text-base m-0 py-1">Cho thuê nhà</p>,
         },
 
         {
           key: "5",
 
-          label: <p className="text-base   m-0 py-1">Tổ chức trải nhiệm</p>,
+          label: <p className="text-base m-0 py-1">Tổ chức trải nhiệm</p>,
         },
         {
           key: "6",
 
-          label: <p className="text-base   m-0 py-1">Trợ giúp</p>,
+          label: <p className="text-base m-0 py-1">Trợ giúp</p>,
         },
       ]}
     />
@@ -75,22 +68,20 @@ export default function HeaderMenu() {
       <div className="userDropDown hidden sm:block">
         <Dropdown overlay={menu} trigger={["click"]}>
           <div
-            className="flex text-gray-500 items-center  "
-            style={{ padding: "5px 12px" }}
+            className="flex text-gray-500 items-center py-1 px-3"
           >
             <FaBars className="text-lg mr-3" />
             <div>
               {" "}
               <img
-                className="rounded-full"
-                style={{ height: "30px", width: "30px" }}
+                className="rounded-full w-8 h-8"
                 src="https://images.pexels.com/photos/338504/pexels-photo-338504.jpeg?auto=compress&cs=tinysrgb&w=600"
                 alt=""
               />
             </div>
             <div
-              className="absolute "
-              style={{ top: "113%", zIndex: "2" }}
+              className="absolute top-t-113 z-10"
+              // style={{ top: "113%", zIndex: "2" }}
             ></div>
           </div>
         </Dropdown>

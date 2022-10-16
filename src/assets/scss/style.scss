@@ -1,9 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@layer components{
+    .hoverDn {
+        @apply cursor-pointer transition-all duration-300
+    }
+}
+
+
+
 
 
 @import "../scss/base/base";
 
-@import "../scss/components/HeaderPage.scss";
-@import "../scss/components/HeaderMenu.scss"
+@import "../scss/components/Header/HeaderMenu.scss";
+@import "../scss/components/Header/HeaderPage.scss"
