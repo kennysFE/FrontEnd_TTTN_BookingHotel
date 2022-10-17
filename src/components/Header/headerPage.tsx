@@ -8,10 +8,11 @@ import {
 } from "react-icons/ai";
 import classNames from "classnames";
 import HeaderMenu from "./HeaderMenu";
+import HeaderSearch from "../HeaderSearch/HeaderSearch";
 
 export default function HeaderPage() {
   const [showLanguages, setShowLanguages] = useState(false);
-  // const [searchVisible, setSearchVisible] = useState(false);
+  const [searchVisible, setSearchVisible] = useState(false);
   const navigate = useNavigate();
 
   return (
@@ -32,7 +33,7 @@ export default function HeaderPage() {
               </div>
               <div className="  flex justify-between items-center  ">
                 <div className="rounded-full searchBox hidden sm:block">
-                  <button className="py-3 px-4 font-medium">Nơi ở</button>
+                  <button className=" py-3 px-4 font-medium" onClick={() => setSearchVisible(!searchVisible)}>Nơi ở</button>
                   <span className="w-px h-6 bg-gray-300 inline-block translate-y-1/4"></span>
                   <button className="py-3 px-4 font-medium">Trải nhiệm</button>
                   <span className="w-px h-6 bg-gray-300 inline-block translate-y-1/4"></span>
@@ -87,6 +88,7 @@ export default function HeaderPage() {
         </div>
 
         {/* HeaderSearc */}
+        <HeaderSearch setSearchVisible={() => setSearchVisible(false)} searchVisible={searchVisible} />
       </div>
     </>
   );
