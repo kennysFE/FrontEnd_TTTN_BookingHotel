@@ -7,7 +7,7 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import classNames from "classnames";
-import HeaderMenu from "./headerMenu";
+import HeaderMenu from "./HeaderMenu";
 import HeaderSearch from "../HeaderSearch/HeaderSearch";
 
 type Props = {}

@@ -13,6 +13,10 @@ import { createBrowserHistory } from "history";
 //ant design
 import "antd/dist/antd.css";
 
+// css slick-slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 //scss
 import "../src/assets/scss/style.scss";
 
